@@ -7,7 +7,7 @@ function callErrorFunction() {
     createError();
   }
   catch(innerError) {
-    var stringWithStack = '\n--THIS WILL NOT REPEAT--\n' + new innerError.stack + '\n--THIS WILL REPEAT--\n';
+    var stringWithStack = '\n--THIS WILL NOT REPEAT--\n' + innerError.stack + '\n--THIS WILL REPEAT--\n';
     console.log(stringWithStack);
     throw new Error(stringWithStack);
   }
