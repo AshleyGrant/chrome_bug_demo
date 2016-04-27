@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <p>
+      Please open your Chrome Dev Tools!
+    </p>
+    <script type="text/html">
+      var stringWithStack = '\n--THIS WILL NOT REPEAT--\n' + new Error().stack + '\n--THIS WILL REPEAT--\n';
+      console.log(stringWithStack);
+      throw new Error(stringWithStack);
+    </script>
+  </body>
+</html>
